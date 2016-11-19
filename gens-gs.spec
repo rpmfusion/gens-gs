@@ -1,7 +1,7 @@
 %global orgname gens
 Name:           %{orgname}-gs
 Version:        2.16.7
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Sega Genesis, Sega CD, and Sega 32X emulator
 
 Url:            http://segaretro.org/Gens/GS
@@ -35,7 +35,6 @@ Requires:       %{name}-doc
 
 %package        doc
 Summary:        Documentation Manual for Gens/GS
-BuildArch:      noarch
 
 %description
 #taken from here: http://segaretro.org/Gens/GS 
@@ -121,6 +120,9 @@ fi
 /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 
 %changelog
+* Sat Nov 19 2016 Nicolas Chauvet <kwizart@gmail.com> - 2.16.7-6
+- Drop BuildArch: noarch for doc - avoid pulling in x86_64 repo
+
 * Mon Oct 27 2014 Jeremy Newton <alexjnewt@hotmail.com> - 2.16.7-5
 - Patch to remove conflict with gens
 - Remove prefix=/usr from configure

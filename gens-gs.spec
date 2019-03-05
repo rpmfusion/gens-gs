@@ -1,7 +1,7 @@
 %global orgname gens
 Name:           %{orgname}-gs
 Version:        2.16.7
-Release:        11%{?dist}
+Release:        12%{?dist}
 Summary:        Sega Genesis, Sega CD, and Sega 32X emulator
 
 Url:            http://segaretro.org/Gens/GS
@@ -120,6 +120,9 @@ fi
 /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 
 %changelog
+* Tue Mar 05 2019 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 2.16.7-12
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
+
 * Sun Aug 19 2018 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 2.16.7-11
 - Rebuilt for Fedora 29 Mass Rebuild binutils issue
 
